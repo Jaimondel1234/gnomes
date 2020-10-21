@@ -1,0 +1,42 @@
+{
+    "name": "gnomes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "webpack-dev-server": "webpack-dev-server",
+        "dev": "webpack serve --mode=development",
+        "prod": "webpack --mode=production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jaimondel1234/gnomes.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Jaimondel1234/gnomes/issues"
+    },
+    "homepage": "https://github.com/Jaimondel1234/gnomes#readme",
+    "dependencies": {
+        "css-loader": "^5.0.0",
+        "file-loader": "^6.1.1",
+        "install": "^0.13.0",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0",
+        "style-loader": "^2.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/preset-env": "^7.12.1",
+        "@babel/preset-react": "^7.12.1",
+        "babel-loader": "^8.1.0",
+        "html-webpack-plugin": "^4.5.0",
+        "path": "^0.12.7",
+        "webpack": "^5.1.3",
+        "webpack-cli": "^4.1.0",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
