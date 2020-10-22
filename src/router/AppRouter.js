@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
-import { GnomeScreen } from "../components/gnome/GnomeScreen";
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import { LoginScreen } from "../auth/LoginScreen";
+import { DashboardRoutes } from "./DashboardRoute";
 
 export function AppRouter() {
+  console.log("router");
   return (
     <Router>
       <Switch>
@@ -13,13 +14,12 @@ export function AppRouter() {
           exact
           path="/login"
           component={LoginScreen}
-          isAuthenticated={false}
+          isAuthenticated={true}
         />
         <PrivateRoute
-          exact
           path="/"
-          component={GnomeScreen}
-          isAuthenticated={false}
+          component={DashboardRoutes}
+          isAuthenticated={true}
         />
         <Redirect to="/" />
       </Switch>
