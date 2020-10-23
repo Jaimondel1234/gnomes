@@ -26,6 +26,14 @@ export const Navbar = () => {
           >
             Search
           </NavLink>
+          <NavLink
+            activeClassName="active"
+            className="nav-item nav-link"
+            exact
+            to="/all-gnomes"
+          >
+            Gnomes
+          </NavLink>
         </div>
       </div>
 

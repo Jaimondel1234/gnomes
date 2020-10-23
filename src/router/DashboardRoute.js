@@ -4,6 +4,7 @@ import { Navbar } from "../components/ui/Navbar";
 import { HomeScreen } from "../components/home/HomeScreen";
 import { SearchScreen } from "../components/search/SearchScreen";
 import { ContainerStyle } from "../styles/core";
+import { GnomeScreen } from "../components/gnome/GnomeScreen";
 
 export const DashboardRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const DashboardRoutes = () => {
         <Switch>
           <Route exact path="/home" component={HomeScreen} />
           <Route exact path="/search" component={SearchScreen} />
+          <Route exact path="/all-gnomes" component={GnomeScreen} />
           <Redirect to="/home" />
         </Switch>
       </ContainerStyle>
