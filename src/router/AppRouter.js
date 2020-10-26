@@ -4,9 +4,9 @@ import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import { LoginScreen } from "../auth/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoute";
+import { ContainerStyle } from "../styles/core";
 
 export function AppRouter() {
-  console.log("router");
   return (
     <Router>
       <Switch>
@@ -14,12 +14,12 @@ export function AppRouter() {
           exact
           path="/login"
           component={LoginScreen}
-          isAuthenticated={true}
+          isAuthenticated={false}
         />
         <PrivateRoute
           path="/"
           component={DashboardRoutes}
-          isAuthenticated={true}
+          isAuthenticated={false}
         />
         <Redirect to="/" />
       </Switch>

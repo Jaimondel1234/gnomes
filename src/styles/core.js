@@ -6,25 +6,69 @@ import {
   border,
   typography,
   shadow,
+  flexbox,
+  position,
 } from "styled-system";
 
 const ContainerStyle = styled.div`
+  ${layout}
+  ${position}
+  ${space}
+  ${color}
+`;
+
+const PanelStyle = styled.div`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  ${color}
+  ${border}
   ${space}
   ${layout}
 `;
 
-const PanelStyle = styled.div`
+const TextStyle = styled.h1`
+  text-align: center;
+
+  ${shadow}
+  ${space}
+  ${typography}
+`;
+const FlexStyle = styled.div`
+  display: flex;
+  ${flexbox}
+  ${layout}
+  ${space}
+`;
+
+const InputStyle = styled.input`
+  height: 100;
+  outline: none;
+  width: 100%;
+
+  ${layout}
   ${color}
   ${border}
   ${space}
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-`;
-
-const TextStyle = styled.span`
   ${typography}
-  ${shadow}
-  font-family: "Times New Roman", Times, serif;
 `;
 
-export { ContainerStyle, PanelStyle, TextStyle };
+const ButtonStyle = styled.button`
+  background: ${(props) => (props.primary ? props.theme.color.main : "white")};
+  border: ${(props) => `2px solid ${props.theme.color.main}`};
+  border-radius: 7px;
+  color: ${(props) => (props.primary ? "white" : props.theme.color.main)};
+  width: 100%;
+
+  ${typography}
+  ${space}
+  ${layout}
+`;
+
+export {
+  ContainerStyle,
+  PanelStyle,
+  TextStyle,
+  FlexStyle,
+  InputStyle,
+  ButtonStyle,
+};
