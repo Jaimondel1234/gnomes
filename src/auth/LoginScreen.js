@@ -10,6 +10,7 @@ import {
 } from "../styles/core";
 import styled from "styled-components";
 
+/** Style of input of login */
 const LoginInputStyle = styled(InputStyle)`
   border-radius: 7px;
   font-size: 21px;
