@@ -60,6 +60,7 @@ const ButtonStyle = styled.button`
   border: ${(props) => `2px solid ${props.theme.color.main}`};
   border-radius: 7px;
   color: ${(props) => (props.primary ? "white" : props.theme.color.main)};
+  cursor: pointer;
   width: 100%;
 
   ${typography}

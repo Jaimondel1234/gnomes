@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 import {
   FlexStyle,
@@ -9,6 +8,8 @@ import {
   InputStyle,
 } from "../styles/core";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { loginRequest } from "../actions/auth";
 
 /** Style of input of login */
 const LoginInputStyle = styled(InputStyle)`
@@ -21,6 +22,8 @@ const LoginInputStyle = styled(InputStyle)`
 `;
 
 export const LoginScreen = () => {
+  const dispatch = useDispatch();
+
   const [formValues, handleInputChange] = useForm({
     email: "",
     password: "",
@@ -30,6 +33,7 @@ export const LoginScreen = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    dispatch(loginRequest(email, password));
   };
 
   return (
