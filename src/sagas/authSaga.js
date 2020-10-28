@@ -3,6 +3,7 @@ import { types } from "../types/types";
 import { API } from "../api/API";
 import { login } from "../actions/auth";
 import Swal from "sweetalert2";
+import { watchGnome } from "./gnomeSaga";
 
 export function* startLoginEmailPassword(email, password) {
   const user = yield call(API.authorizeMock, email, password);
@@ -22,6 +23,7 @@ export function* startLoginEmailPassword(email, password) {
     localStorage.setItem("user", JSON.stringify(user));
     const { uid, displayName } = user;
     yield put(login(uid, displayName));
+    yield call(watchGnome);
   } else {
     Swal.fire("Error", "This email does not exist", "error");
   }

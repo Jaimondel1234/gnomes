@@ -2,6 +2,7 @@ import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { authReducer } from "../reducers/authReducer";
 import createSagaMiddleware from "redux-saga";
 import { rootSaga } from "../sagas/rootSaga";
+import { gnomeReducer } from "../reducers/gnomeReducer";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -12,6 +13,7 @@ const composeEnhancers =
 
 const reducers = combineReducers({
   auth: authReducer,
+  gnome: gnomeReducer,
 });
 const enhancers = composeEnhancers(applyMiddleware(sagaMiddleware));
 

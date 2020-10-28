@@ -33,11 +33,13 @@ const TextStyle = styled.h1`
   ${shadow}
   ${space}
   ${typography}
+  ${color}
 `;
 
 /** Style of display flex*/
 const FlexStyle = styled.div`
   display: flex;
+
   ${flexbox}
   ${layout}
   ${space}
@@ -62,10 +64,23 @@ const ButtonStyle = styled.button`
   color: ${(props) => (props.primary ? "white" : props.theme.color.main)};
   cursor: pointer;
   width: 100%;
+  text-shadow: 2px 2px 4px #000000;
 
   ${typography}
   ${space}
   ${layout}
+`;
+
+/** Style of Image*/
+const ImageStyle = styled.img`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 7px;
+`;
+
+/** Style of Scroll*/
+const ScrollContainer = styled.div`
+  max-height: 90vh;
+  overflow-y: scroll;
 `;
 
 export {
@@ -75,4 +90,6 @@ export {
   FlexStyle,
   InputStyle,
   ButtonStyle,
+  ImageStyle,
+  ScrollContainer,
 };
