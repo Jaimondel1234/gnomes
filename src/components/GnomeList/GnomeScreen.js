@@ -7,11 +7,13 @@ import { useDispatch, useSelector } from "react-redux";
 export const GnomeScreen = () => {
   const dispatch = useDispatch();
   const { scrollNumberGnomes } = useSelector((state) => state.gnome);
+
   useEffect(() => {
     if (scrollNumberGnomes === 0) {
       dispatch(loadGnomes());
     }
-  }, [loadGnomes, dispatch]);
+  }, [loadGnomes, dispatch, scrollNumberGnomes]);
+
   return (
     <ContainerStyle mt="5">
       <GnomeList />

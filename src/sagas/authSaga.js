@@ -23,7 +23,6 @@ export function* startLoginEmailPassword(email, password) {
     localStorage.setItem("user", JSON.stringify(user));
     const { uid, displayName } = user;
     yield put(login(uid, displayName));
-    yield call(watchGnome);
   } else {
     Swal.fire("Error", "This email does not exist", "error");
   }

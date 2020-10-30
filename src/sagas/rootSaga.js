@@ -1,7 +1,7 @@
-import { call } from "redux-saga/effects";
+import { call, all } from "redux-saga/effects";
 import { watchAuth } from "./authSaga";
 import { watchGnome } from "./gnomeSaga";
 
 export function* rootSaga() {
-  yield call(watchAuth);
+  yield all([call(watchAuth), call(watchGnome)]);
 }

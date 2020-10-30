@@ -42,6 +42,7 @@ export const LoginScreen = () => {
         fontSize="60px"
         fontWeight="bold"
         textShadow="2px 2px 4px #000000"
+        textAlign="center"
         pb="20px"
         pt="25vh"
       >

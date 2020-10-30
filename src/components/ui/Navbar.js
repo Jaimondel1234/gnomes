@@ -1,7 +1,16 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../actions/auth";
+import { NavbarList, NavbarElement, ButtonStyle } from "../../styles/core";
+import styled from "styled-components";
+
+const ButtonLogoutStyle = styled(ButtonStyle)`
+  display: block;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+`;
 
 export const Navbar = () => {
   const dispatch = useDispatch();
@@ -12,47 +21,29 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-      <Link className="navbar-brand" to="/">
-        Gnome Projet
-      </Link>
-
-      <div className="navbar-collapse">
-        <div className="navbar-nav">
-          <NavLink
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/home"
-          >
+    <>
+      <NavbarList>
+        <NavbarElement>
+          <Link exact to="/home">
             Home
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/search"
-          >
+          </Link>
+        </NavbarElement>
+        <NavbarElement>
+          <Link exact to="/search">
             Search
-          </NavLink>
-          <NavLink
-            activeClassName="active"
-            className="nav-item nav-link"
-            exact
-            to="/all-gnomes"
-          >
+          </Link>
+        </NavbarElement>
+        <NavbarElement>
+          <Link exact to="/all-gnomes">
             Gnomes
-          </NavLink>
-        </div>
-      </div>
-
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul className="navbar-nav ml-auto">
-          <button className="nav-item nav-link btn" onClick={handleLogout}>
+          </Link>
+        </NavbarElement>
+        <NavbarElement float="right">
+          <ButtonLogoutStyle onClick={handleLogout} m="5px" p="5px 10px">
             Logout
-          </button>
-        </ul>
-      </div>
-    </nav>
+          </ButtonLogoutStyle>
+        </NavbarElement>
+      </NavbarList>
+    </>
   );
 };

@@ -1,14 +1,16 @@
-import { call, put, take, select } from "redux-saga/effects";
-
+import { call, put, take, select, delay } from "redux-saga/effects";
 import { API } from "../api/API";
 import { types } from "../types/types";
-import { addGnomes } from "../actions/gnome";
+import { addGnomes, setLoading } from "../actions/gnome";
 
 const getScrollNumberGnomes = (state) => state.gnome;
 
 export function* loadGnomesSaga() {
   const { scrollNumberGnomes } = yield select(getScrollNumberGnomes);
-  const gnomes = yield call(API.getGnomes, scrollNumberGnomes + 10);
+  yield put(setLoading(true));
+  yield delay(700);
+  const gnomes = yield call(API.getGnomes, scrollNumberGnomes + 30);
+  yield put(setLoading(false));
   yield put(addGnomes(gnomes));
 }
 

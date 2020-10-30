@@ -5,4 +5,5 @@ export const types = {
 
   addGnomes: "[Gnomes] Add Gnomes",
   loadGnomes: "[Gnomes] Load Gnomes",
+  setLoading: "[Gnomes] Set Loading",
 };
