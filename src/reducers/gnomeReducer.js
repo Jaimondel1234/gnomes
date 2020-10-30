@@ -1,7 +1,7 @@
 import { types } from "../types/types";
 
 export const gnomeReducer = (
-  state = { scrollNumberGnomes: 0, loading: false },
+  state = { scrollNumberGnomes: 0, loading: false, gnomeSearched: {} },
   action
 ) => {
   switch (action.type) {
@@ -15,6 +15,11 @@ export const gnomeReducer = (
       return {
         ...state,
         loading: action.loading,
+      };
+    case types.setGnomeSearched:
+      return {
+        ...state,
+        gnomeSearched: action.gnomeSearched,
       };
 
     default:

@@ -44,8 +44,7 @@ const TextStyle = styled.div`
   ${shadow}
   ${space}
   ${typography}
-  ${color}
-  text-align: center;
+  ${color} //text-align: center;
 `;
 
 /** Style of display flex*/

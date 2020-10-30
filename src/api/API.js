@@ -5,13 +5,13 @@ export const API = {
     }
     return null;
   },
-  async getGnomes(numberGnomes) {
+  async getGnomes() {
     const url =
       "http://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
     const resp = await fetch(url, {
       method: "GET",
     });
     const body = await resp.json();
-    return body.Brastlewark.slice(0, numberGnomes);
+    return body.Brastlewark;
   },
 };

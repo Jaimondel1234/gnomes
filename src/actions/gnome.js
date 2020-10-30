@@ -13,3 +13,13 @@ export const setLoading = (loading) => ({
   type: types.setLoading,
   loading,
 });
+
+export const setGnomeSearched = (gnomeSearched) => ({
+  type: types.setGnomeSearched,
+  gnomeSearched,
+});
+
+export const startGnomeSearch = (gnomeName) => ({
+  type: types.startGnomeSearch,
+  gnomeName,
+});

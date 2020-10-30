@@ -3,7 +3,6 @@ import { types } from "../types/types";
 import { API } from "../api/API";
 import { login } from "../actions/auth";
 import Swal from "sweetalert2";
-import { watchGnome } from "./gnomeSaga";
 
 export function* startLoginEmailPassword(email, password) {
   const user = yield call(API.authorizeMock, email, password);
