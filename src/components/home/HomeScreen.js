@@ -9,6 +9,7 @@ export const HomeScreen = () => {
           fontSize="60px"
           fontWeight="bold"
           textShadow="2px 2px 4px #000000"
+          textAlign="center"
         >
           Welcome to the Gnome Database
         </TextStyle>

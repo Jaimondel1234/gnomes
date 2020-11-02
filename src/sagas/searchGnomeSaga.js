@@ -1,11 +1,12 @@
 import { call, put, take } from "redux-saga/effects";
 import { types } from "../types/types";
 import { setGnomeSearched } from "../actions/gnome";
-import { getGnomeByName } from "../helpers/helpers";
+import { getGnomeByName, getGenreByHairColor } from "../helpers/helpers";
 
 export function* searchGnome(gnomeName) {
   const gnome = yield call(getGnomeByName, gnomeName);
-  yield put(setGnomeSearched(gnome[0]));
+  const gnomeGenre = getGenreByHairColor(gnome[0].hair_color);
+  yield put(setGnomeSearched({ ...gnome[0], genre: gnomeGenre }));
 }
 
 export function* watchSearchGnome() {

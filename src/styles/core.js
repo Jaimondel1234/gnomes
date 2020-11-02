@@ -24,6 +24,7 @@ const PanelStyle = styled.div`
   ${border}
   ${space}
   ${layout}
+  ${typography}
 `;
 
 /** Style of card placeholder */
@@ -44,7 +45,7 @@ const TextStyle = styled.div`
   ${shadow}
   ${space}
   ${typography}
-  ${color} //text-align: center;
+  ${color}
 `;
 
 /** Style of display flex*/
@@ -110,6 +111,7 @@ const SpanStyle = styled.span`
   ${space}
   ${typography}
   ${color}
+  display:table;
 `;
 
 /** Style of Navbar List */

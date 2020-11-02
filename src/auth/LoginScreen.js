@@ -14,7 +14,7 @@ import { loginRequest } from "../actions/auth";
 /** Style of input of login */
 const LoginInputStyle = styled(InputStyle)`
   border-radius: 7px;
-  font-size: 21px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
   max-width: 400px;
@@ -75,9 +75,11 @@ export const LoginScreen = () => {
         <ButtonStyle
           primary
           p="12px"
-          fontSize="22px"
+          fontSize="25px"
           fontWeight="bold"
           maxWidth="400px"
+          letterSpacing="3px"
+          lineHeight="40px"
           type="submit"
         >
           Send

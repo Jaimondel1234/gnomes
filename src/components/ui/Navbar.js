@@ -10,6 +10,8 @@ const ButtonLogoutStyle = styled(ButtonStyle)`
   font-weight: bold;
   font-size: 40px;
   text-align: center;
+  letter-spacing: 5px;
+  line-height: 60px;
 `;
 
 export const Navbar = () => {
@@ -24,19 +26,13 @@ export const Navbar = () => {
     <>
       <NavbarList>
         <NavbarElement>
-          <Link exact to="/home">
-            Home
-          </Link>
+          <Link to="/home">Home</Link>
         </NavbarElement>
         <NavbarElement>
-          <Link exact to="/search">
-            Search
-          </Link>
+          <Link to="/search">Search</Link>
         </NavbarElement>
         <NavbarElement>
-          <Link exact to="/all-gnomes">
-            Gnomes
-          </Link>
+          <Link to="/all-gnomes">Gnomes</Link>
         </NavbarElement>
         <NavbarElement float="right">
           <ButtonLogoutStyle onClick={handleLogout} m="5px" p="5px 10px">

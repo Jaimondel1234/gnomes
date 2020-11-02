@@ -8,6 +8,7 @@ import {
   SpanStyle,
 } from "../../styles/core";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const ListElementInformation = styled(ListElement)`
   font-weight: bold;
@@ -16,8 +17,22 @@ const ListElementInformation = styled(ListElement)`
   padding-left: 20px;
   margin-left: 5px;
 `;
-export const GnomeInformation = (props) => {
-  const { name, thumbnail, age, hair_color, height, weight } = props;
+
+const SquareListElementInformation = styled(ListElementInformation)`
+  margin-left: 40px;
+  list-style-type: square;
+`;
+export const GnomeInformation = ({
+  name,
+  thumbnail,
+  age,
+  genre,
+  hair_color,
+  height,
+  weight,
+  professions,
+  friends,
+}) => {
   return (
     <FlexStyle
       alignItems="center"
@@ -35,11 +50,29 @@ export const GnomeInformation = (props) => {
         textAlign="center"
         mb="20px"
       >
-        {name}
+        Gnome Information
       </SpanStyle>
-      <PanelStyle color="#ffff" borderRadius={10} p="20px">
+      <PanelStyle
+        color="#ffff"
+        borderRadius={10}
+        p="10px 10px 20px 20px"
+        mr="10px"
+        ml="10px"
+      >
+        <SpanStyle
+          color="white"
+          fontSize="40px"
+          fontWeight="bold"
+          p="15px"
+          textShadow="2px 2px 4px #000000"
+          borderRadius="10px"
+          bg="#1E90FF"
+          m="5px auto"
+        >
+          {name}
+        </SpanStyle>
         <FlexStyle
-          alignItem="center"
+          alignItems="center"
           justifyContent="flex-start"
           flexDirection="row"
         >
@@ -60,28 +93,52 @@ export const GnomeInformation = (props) => {
             p="10px 50px 20px 50px"
             borderRadius={20}
           >
-            <SpanStyle
-              color="white"
-              fontSize="40px"
-              fontWeight="bold"
-              p="15px"
-              textShadow="2px 2px 4px #000000"
-              borderRadius="10px"
-              bg="#1E90FF"
-            >
-              Information
-            </SpanStyle>
             <ListElementInformation mt="60px">
               Age: {age}
             </ListElementInformation>
+            <ListElementInformation>Genre: {genre}</ListElementInformation>
             <ListElementInformation>
               Hair color: {hair_color}
             </ListElementInformation>
             <ListElementInformation>Height: {height}</ListElementInformation>
             <ListElementInformation>Width: {weight}</ListElementInformation>
+
+            {professions && professions.length > 0 && (
+              <>
+                <ListElementInformation>Professions:</ListElementInformation>
+                {professions.map((profession, i) => (
+                  <SquareListElementInformation key={i}>
+                    {profession}
+                  </SquareListElementInformation>
+                ))}
+              </>
+            )}
+
+            {friends && friends.length > 0 && (
+              <>
+                <ListElementInformation>Professions:</ListElementInformation>
+                {friends.map((friend, i) => (
+                  <SquareListElementInformation key={i}>
+                    {friend}
+                  </SquareListElementInformation>
+                ))}
+              </>
+            )}
           </ContainerList>
         </FlexStyle>
       </PanelStyle>
     </FlexStyle>
   );
+};
+
+GnomeInformation.propTypes = {
+  name: PropTypes.string,
+  thumbnail: PropTypes.string,
+  age: PropTypes.number,
+  genre: PropTypes.string,
+  hair_color: PropTypes.string,
+  height: PropTypes.number,
+  weight: PropTypes.number,
+  professions: PropTypes.arrayOf(PropTypes.string),
+  friends: PropTypes.arrayOf(PropTypes.string),
 };

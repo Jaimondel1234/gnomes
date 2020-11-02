@@ -1,7 +1,6 @@
 import React from "react";
 import {
   PanelStyle,
-  TextStyle,
   ImageStyle,
   FlexStyle,
   ContainerStyle,
@@ -9,7 +8,7 @@ import {
   SpanStyle,
 } from "../../styles/core";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export const GnomeCard = ({ ...props }) => {
   const { name, thumbnail } = props;
@@ -58,13 +57,29 @@ export const GnomeCard = ({ ...props }) => {
         <ButtonStyle
           primary
           p="12px"
-          fontSize="22px"
+          fontSize="25px"
           fontWeight="bold"
           onClick={handleClick}
+          letterSpacing="3px"
+          lineHeight="50px"
         >
           ... More
         </ButtonStyle>
       </FlexStyle>
     </PanelStyle>
   );
+};
+
+GnomeCard.propTypes = {
+  props: PropTypes.shape({
+    name: PropTypes.string,
+    thumbnail: PropTypes.string,
+    age: PropTypes.number,
+    genre: PropTypes.string,
+    hair_color: PropTypes.string,
+    height: PropTypes.number,
+    weight: PropTypes.number,
+    professions: PropTypes.arrayOf(PropTypes.string),
+    friends: PropTypes.arrayOf(PropTypes.string),
+  }),
 };
