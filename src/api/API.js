@@ -9,7 +9,7 @@ export const API = {
   },
   async getGnomes() {
     const url =
-      "http://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
+      "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
     const body = await fetchConfig({
       url,
       // headers: { "Content-Type": "text/plain" },
