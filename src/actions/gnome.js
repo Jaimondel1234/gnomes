@@ -23,3 +23,7 @@ export const startGnomeSearch = (gnomeName) => ({
   type: types.startGnomeSearch,
   gnomeName,
 });
+
+export const cleanGnomes = () => ({
+  type: types.cleanGnomes,
+});

@@ -38,6 +38,7 @@ export const GnomeInformation = ({
       alignItems="center"
       justifyContent="space-between"
       flexDirection="column"
+      mb="5px"
     >
       <SpanStyle
         color="white"

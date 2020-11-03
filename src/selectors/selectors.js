@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 export const getGnomeByNameSelector = (gnomeList, name) => {
-  console.log(gnomeList);
+  gnomeList;
   return gnomeList.filter(
     (gnome) => gnome.name.toUpperCase().trim() === name.toUpperCase().trim()
   );

@@ -1,4 +1,4 @@
-import { call, put, take, select, delay } from "redux-saga/effects";
+import { call, put, take, select, delay, fork } from "redux-saga/effects";
 import { types } from "../types/types";
 import { addGnomes, setLoading } from "../actions/gnome";
 import { getGnomesByNumber, getListWithGenres } from "../helpers/helpers";

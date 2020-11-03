@@ -8,4 +8,5 @@ export const types = {
   setLoading: "[Gnomes] Set Loading",
   setGnomeSearched: "[Gnomes] Set Gnome Searched",
   startGnomeSearch: "[Gnomes] Start Gnome Search",
+  cleanGnomes: "[Gnomes] Clean Gnomes",
 };

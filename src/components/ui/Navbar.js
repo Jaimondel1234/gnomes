@@ -18,8 +18,8 @@ export const Navbar = () => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    dispatch(logout());
     localStorage.removeItem("user");
+    dispatch(logout());
   };
 
   return (
