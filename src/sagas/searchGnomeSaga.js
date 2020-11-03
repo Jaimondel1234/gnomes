@@ -4,9 +4,14 @@ import { setGnomeSearched } from "../actions/gnome";
 import { getGnomeByName, getGenreByHairColor } from "../helpers/helpers";
 
 export function* searchGnome(gnomeName) {
-  const gnome = yield call(getGnomeByName, gnomeName);
-  const gnomeGenre = getGenreByHairColor(gnome[0].hair_color);
-  yield put(setGnomeSearched({ ...gnome[0], genre: gnomeGenre }));
+  try {
+    const gnome = yield call(getGnomeByName, gnomeName);
+    const gnomeGenre = getGenreByHairColor(gnome[0].hair_color);
+    yield put(setGnomeSearched({ ...gnome[0], genre: gnomeGenre }));
+  } catch (e) {
+    Swal.fire("Error", "Error in search for gnome", "error");
+    console.log("e");
+  }
 }
 
 export function* watchSearchGnome() {

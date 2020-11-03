@@ -1,3 +1,5 @@
+import { fetchConfig } from "../helpers/fetchConfig";
+
 export const API = {
   authorizeMock(email, password) {
     if (email === "heroe@gmail.com" && password == "heroe") {
@@ -8,10 +10,10 @@ export const API = {
   async getGnomes() {
     const url =
       "http://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
-    const resp = await fetch(url, {
-      method: "GET",
+    const body = await fetchConfig({
+      url,
+      // headers: { "Content-Type": "text/plain" },
     });
-    const body = await resp.json();
     return body.Brastlewark;
   },
 };

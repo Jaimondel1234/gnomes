@@ -1,4 +1,4 @@
-import { call, take, put, delay, takeLatest } from "redux-saga/effects";
+import { call, take, put, delay } from "redux-saga/effects";
 import { types } from "../types/types";
 import { API } from "../api/API";
 import { login } from "../actions/auth";
@@ -18,17 +18,20 @@ export function* loadingSaga() {
   Swal.close();
 }
 export function* startLoginEmailPassword(email, password) {
-  const user = yield call(API.authorizeMock, email, password);
+  try {
+    const user = yield call(API.authorizeMock, email, password);
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+      const { uid, displayName } = user;
+      yield call(loadingSaga);
 
-  if (user) {
-    localStorage.setItem("user", JSON.stringify(user));
-    const { uid, displayName } = user;
-    yield call(loadingSaga);
-
-    yield put(login(uid, displayName));
-    yield put(loadGnomes());
-  } else {
-    Swal.fire("Error", "This email does not exist", "error");
+      yield put(login(uid, displayName));
+      yield put(loadGnomes());
+    } else {
+      Swal.fire("Error", "This email does not exist", "error");
+    }
+  } catch (e) {
+    console.log(e);
   }
 }
 
