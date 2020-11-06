@@ -1,6 +1,6 @@
 # Gnome App
 
-** Gnome App ** displays a list of gnomes with infinite scroll and searches for gnome by name.
+**Gnome App** displays a list of gnomes with infinite scroll and searches for gnome by name.
 
 ## Login
 
