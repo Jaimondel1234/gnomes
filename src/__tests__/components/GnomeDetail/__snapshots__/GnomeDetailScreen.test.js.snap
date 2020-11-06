@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test de <GnomeDetailScreen/> it must be displayed correctly 1`] = `
+<div
+  className="core__ContainerStyle-qu5lcc-0 kLYPbT"
+>
+  <div
+    className="core__FlexStyle-qu5lcc-4 bwoVxe"
+  >
+    <span
+      className="core__SpanStyle-qu5lcc-9 eYglRQ"
+      color="white"
+      fontSize="60px"
+      fontWeight="bold"
+    >
+      Gnome Information
+    </span>
+    <div
+      className="core__PanelStyle-qu5lcc-1 bKsISG"
+      color="#ffff"
+    >
+      <span
+        className="core__SpanStyle-qu5lcc-9 kHaOjz"
+        color="white"
+        fontSize="40px"
+        fontWeight="bold"
+      >
+        Tobus Quickwhistle
+      </span>
+      <div
+        className="core__FlexStyle-qu5lcc-4 ifNWpz"
+      >
+        <img
+          className="core__ImageStyle-qu5lcc-7 keFsCu"
+          onError={[Function]}
+          src="http://www.publicdomainpictures.net/pictures/10000/nahled/thinking-monkey-11282237747K8xB.jpg"
+        />
+        <ul
+          className="core__ContainerList-qu5lcc-12 bqAzqZ"
+        >
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 dOBnnW eYDWhd"
+          >
+            Age: 
+            306
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Genre: 
+            female
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Hair color: 
+            Pink
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Height: 
+            107.75835
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Width: 
+            39.065952
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Professions:
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Metalworker
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Woodcarver
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Stonecarver
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+             Tinker
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Tailor
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Potter
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 ffJUNN eYDWhd"
+          >
+            Professions:
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Cogwitz Chillwidget
+          </li>
+          <li
+            className="core__ListElement-qu5lcc-13 GnomeInformation__ListElementInformation-xcmbfp-0 GnomeInformation__SquareListElementInformation-xcmbfp-1 ffJUNN eYDWhd hFomdp"
+          >
+            Tinadette Chillbuster
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

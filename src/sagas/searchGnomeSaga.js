@@ -2,6 +2,7 @@ import { call, put, take } from "redux-saga/effects";
 import { types } from "../types/types";
 import { setGnomeSearched } from "../actions/gnome";
 import { getGnomeByName, getGenreByHairColor } from "../helpers/helpers";
+import Swal from "sweetalert2";
 
 export function* searchGnome(gnomeName) {
   try {
@@ -10,7 +11,7 @@ export function* searchGnome(gnomeName) {
     yield put(setGnomeSearched({ ...gnome[0], genre: gnomeGenre }));
   } catch (e) {
     Swal.fire("Error", "Error in search for gnome", "error");
-    console.log("e");
+    //console.log(e);
   }
 }
 

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <GnomeScreen/> it must be displayed correctly 1`] = `
+<div
+  className="core__ContainerStyle-qu5lcc-0 kLYPbT"
+>
+  <div
+    className="core__ScrollContainer-qu5lcc-8 dBQIIB"
+    onScroll={[Function]}
+  >
+    <div
+      className="core__FlexStyle-qu5lcc-4 eTaOSt"
+    />
+  </div>
+</div>
+`;

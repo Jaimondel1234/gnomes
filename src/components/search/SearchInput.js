@@ -28,7 +28,7 @@ export const SearchInput = () => {
   const { searchText } = formValues;
 
   const handleSearch = (e) => {
-    if (event.key === "Enter") {
+    if (e.key === "Enter") {
       dispatch(startGnomeSearch(searchText));
     }
   };

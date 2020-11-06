@@ -24,14 +24,14 @@ export function* startLoginEmailPassword(email, password) {
       localStorage.setItem("user", JSON.stringify(user));
       const { uid, displayName } = user;
       yield call(loadingSaga);
-
       yield put(login(uid, displayName));
       yield put(loadGnomes());
     } else {
       Swal.fire("Error", "This email does not exist", "error");
     }
   } catch (e) {
-    console.log(e);
+    // console.log(e);
+    Swal.fire("Error", "An error has occurred", "error");
   }
 }
 

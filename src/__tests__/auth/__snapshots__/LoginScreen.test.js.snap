@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <LoginScreen/> it must be displayed correctly 1`] = `
+<div
+  className="core__PanelStyle-qu5lcc-1 jqDqbg"
+  color="#ffff"
+>
+  <div
+    className="core__TextStyle-qu5lcc-3 ccva-db"
+    fontSize="60px"
+    fontWeight="bold"
+  >
+    Login
+  </div>
+  <form
+    className="core__FlexStyle-qu5lcc-4 joXSZK"
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="core__InputStyle-qu5lcc-5 LoginScreen__LoginInputStyle-sc-1or96zl-0 eMTzQF dhIvMS"
+      name="email"
+      onChange={[Function]}
+      placeholder="Your email"
+      type="text"
+      value="heroe@gmail.com"
+    />
+    <input
+      autoComplete="off"
+      className="core__InputStyle-qu5lcc-5 LoginScreen__LoginInputStyle-sc-1or96zl-0 eMTzQF dhIvMS"
+      name="password"
+      onChange={[Function]}
+      placeholder="Your password"
+      type="password"
+      value="heroe"
+    />
+    <button
+      className="core__ButtonStyle-qu5lcc-6 gzLaSK"
+      fontSize="25px"
+      fontWeight="bold"
+      letterSpacing="3px"
+      type="submit"
+    >
+      Send
+    </button>
+  </form>
+</div>
+`;

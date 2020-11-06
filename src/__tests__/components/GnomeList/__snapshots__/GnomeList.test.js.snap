@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <GnomeList/> it must be displayed correctly 1`] = `
+<div
+  className="core__ScrollContainer-qu5lcc-8 dBQIIB"
+  onScroll={[Function]}
+>
+  <div
+    className="core__FlexStyle-qu5lcc-4 eTaOSt"
+  >
+    <div
+      className="core__PanelStyle-qu5lcc-1 hCLCiU"
+    >
+      <div
+        className="core__FlexStyle-qu5lcc-4 joXSZK"
+      >
+        <span
+          className="core__SpanStyle-qu5lcc-9 koWOQR"
+          color="white"
+          fontSize="30px"
+          fontWeight="bold"
+        >
+          Tobus Quickwhistle
+        </span>
+        <div
+          className="core__ContainerStyle-qu5lcc-0 cjWygG"
+        >
+          <img
+            className="core__ImageStyle-qu5lcc-7 ecLPaO"
+            height="300px"
+            onError={[Function]}
+            src="http://www.publicdomainpictures.net/pictures/10000/nahled/thinking-monkey-11282237747K8xB.jpg"
+            width="350px"
+          />
+        </div>
+        <button
+          className="core__ButtonStyle-qu5lcc-6 eFvMQp"
+          fontSize="25px"
+          fontWeight="bold"
+          letterSpacing="3px"
+          onClick={[Function]}
+        >
+          ... More
+        </button>
+      </div>
+    </div>
+    <div
+      className="core__PanelStyle-qu5lcc-1 hCLCiU"
+    >
+      <div
+        className="core__FlexStyle-qu5lcc-4 joXSZK"
+      >
+        <span
+          className="core__SpanStyle-qu5lcc-9 koWOQR"
+          color="white"
+          fontSize="30px"
+          fontWeight="bold"
+        >
+          Fizkin Voidbuster
+        </span>
+        <div
+          className="core__ContainerStyle-qu5lcc-0 cjWygG"
+        >
+          <img
+            className="core__ImageStyle-qu5lcc-7 ecLPaO"
+            height="300px"
+            onError={[Function]}
+            src="http://www.publicdomainpictures.net/pictures/120000/nahled/white-hen.jpg"
+            width="350px"
+          />
+        </div>
+        <button
+          className="core__ButtonStyle-qu5lcc-6 eFvMQp"
+          fontSize="25px"
+          fontWeight="bold"
+          letterSpacing="3px"
+          onClick={[Function]}
+        >
+          ... More
+        </button>
+      </div>
+    </div>
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+    <div
+      className="core__PlaceHolderStyle-qu5lcc-2 hNGclR"
+    />
+  </div>
+</div>
+`;
