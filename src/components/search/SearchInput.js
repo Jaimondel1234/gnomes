@@ -17,6 +17,7 @@ const SearchInputStyle = styled(InputStyle)`
   font-weight: bold;
   margin-bottom: 20px;
   padding: 12px;
+  width: 70%;
 `;
 
 /*

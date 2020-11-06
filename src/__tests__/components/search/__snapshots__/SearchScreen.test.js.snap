@@ -13,7 +13,7 @@ exports[`Test <SearchScreen/> it must be displayed correctly 1`] = `
   </div>
   <input
     autoComplete="off"
-    className="core__InputStyle-qu5lcc-5 SearchInput__SearchInputStyle-uz7aty-0 eMTzQF GMxWa"
+    className="core__InputStyle-qu5lcc-5 SearchInput__SearchInputStyle-uz7aty-0 eMTzQF jQEehj"
     name="searchText"
     onChange={[Function]}
     onKeyPress={[Function]}

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { GnomeInformation } from '../Shared/GnomeInformation';
 import { isEmpty } from 'lodash';
 /*
-component that displays the search screen for a gnome
+ Component that displays the search screen for a gnome
 */
 export const SearchScreen = () => {
   const { gnomeSearched } = useSelector((state) => state.gnome);
