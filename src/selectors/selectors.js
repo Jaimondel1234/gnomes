@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
+import filter from "lodash/filter";
 
 export const getGnomeByNameSelector = (gnomeList, name) => {
-  return gnomeList.filter(
+  return filter(
+    gnomeList,
     (gnome) => gnome.name.toUpperCase().trim() === name.toUpperCase().trim()
   );
 };

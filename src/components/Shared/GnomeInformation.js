@@ -9,6 +9,7 @@ import {
 } from "../../styles/core";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import map from "lodash/map";
 
 const ListElementInformation = styled(ListElement)`
   font-weight: bold;
@@ -107,7 +108,7 @@ export const GnomeInformation = ({
             {professions && professions.length > 0 && (
               <>
                 <ListElementInformation>Professions:</ListElementInformation>
-                {professions.map((profession, i) => (
+                {map(professions, (profession, i) => (
                   <SquareListElementInformation key={i}>
                     {profession}
                   </SquareListElementInformation>
@@ -118,7 +119,7 @@ export const GnomeInformation = ({
             {friends && friends.length > 0 && (
               <>
                 <ListElementInformation>Professions:</ListElementInformation>
-                {friends.map((friend, i) => (
+                {map(friends, (friend, i) => (
                   <SquareListElementInformation key={i}>
                     {friend}
                   </SquareListElementInformation>

@@ -8,6 +8,7 @@ import { GnomeCard } from "./GnomeCard";
 import { useSelector, useDispatch } from "react-redux";
 import { loadGnomes } from "../../actions/gnome";
 import { fill } from "lodash";
+import map from "lodash/map";
 
 let emptyArray = fill(new Array(20), 0);
 
@@ -34,9 +35,9 @@ export const GnomeList = () => {
         flexWrap="wrap"
       >
         {gnomes &&
-          gnomes.map(({ id, ...props }) => <GnomeCard key={id} {...props} />)}
+          map(gnomes, ({ id, ...props }) => <GnomeCard key={id} {...props} />)}
         {loading &&
-          placeHolderArray.map((value) => (
+          map(placeHolderArray, (value) => (
             <PlaceHolderStyle
               key={value}
               bg="grey"
