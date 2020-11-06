@@ -1,13 +1,17 @@
-import { createStore, combineReducers, compose, applyMiddleware } from "redux";
-import { authReducer } from "../reducers/authReducer";
-import createSagaMiddleware from "redux-saga";
-import { rootSaga } from "../sagas/rootSaga";
-import { gnomeReducer } from "../reducers/gnomeReducer";
+import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+import { authReducer } from '../reducers/authReducer';
+import createSagaMiddleware from 'redux-saga';
+import { rootSaga } from '../sagas/rootSaga';
+import { gnomeReducer } from '../reducers/gnomeReducer';
+
+/* 
+  Store Configuration and middlewares
+*/
 
 const sagaMiddleware = createSagaMiddleware();
 
 const composeEnhancers =
-  (typeof window !== "undefined" &&
+  (typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
 

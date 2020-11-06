@@ -1,9 +1,12 @@
-import PropTypes, { string } from "prop-types";
+import PropTypes, { string } from 'prop-types';
 
-export async function fetchConfig({ method = "GET", url, headers = {} }) {
+/* 
+  fetch with configuration with errors costum
+ */
+export async function fetchConfig({ method = 'GET', url, headers = {} }) {
   const resp = await fetch(url, {
-    method: "GET",
-    headers: { Accept: "application/json" },
+    method: 'GET',
+    headers: { Accept: 'application/json' },
   });
   if (resp.status === 200) {
     return await resp.json();

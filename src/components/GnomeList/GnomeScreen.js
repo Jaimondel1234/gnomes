@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
-import { ContainerStyle, ScrollContainer } from "../../styles/core";
-import { GnomeList } from "./GnomeList";
-import { loadGnomes } from "../../actions/gnome";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { ContainerStyle, ScrollContainer } from '../../styles/core';
+import { GnomeList } from './GnomeList';
+import { loadGnomes } from '../../actions/gnome';
+import { useDispatch, useSelector } from 'react-redux';
 
+/*
+  Component that displays the screen with list gnomes
+*/
 export const GnomeScreen = () => {
   const dispatch = useDispatch();
   const { scrollNumberGnomes } = useSelector((state) => state.gnome);
@@ -16,7 +19,7 @@ export const GnomeScreen = () => {
   }, [loadGnomes, dispatch, scrollNumberGnomes, uid]);
 
   return (
-    <ContainerStyle mt="5">
+    <ContainerStyle mt='5'>
       <GnomeList />
     </ContainerStyle>
   );

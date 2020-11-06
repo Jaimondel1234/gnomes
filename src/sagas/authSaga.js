@@ -1,13 +1,17 @@
-import { call, take, put, delay } from "redux-saga/effects";
-import { types } from "../types/types";
-import { API } from "../api/API";
-import { login } from "../actions/auth";
-import Swal from "sweetalert2";
-import { cleanGnomes, loadGnomes } from "../actions/gnome";
+import { call, take, put, delay } from 'redux-saga/effects';
+import { types } from '../types/types';
+import { API } from '../api/API';
+import { login } from '../actions/auth';
+import Swal from 'sweetalert2';
+import { cleanGnomes, loadGnomes } from '../actions/gnome';
+
+/* 
+  Auth Saga
+*/
 
 export function* loadingSaga() {
   Swal.fire({
-    title: "Uploading ...",
+    title: 'Uploading ...',
     allowOutsideClick: false,
     willOpen: () => {
       Swal.showLoading();
@@ -21,17 +25,18 @@ export function* startLoginEmailPassword(email, password) {
   try {
     const user = yield call(API.authorizeMock, email, password);
     if (user) {
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem('user', JSON.stringify(user));
       const { uid, displayName } = user;
       yield call(loadingSaga);
       yield put(login(uid, displayName));
       yield put(loadGnomes());
     } else {
-      Swal.fire("Error", "This email does not exist", "error");
+      s;
+      Swal.fire('Error', 'This email does not exist', 'error');
     }
   } catch (e) {
     // console.log(e);
-    Swal.fire("Error", "An error has occurred", "error");
+    Swal.fire('Error', 'An error has occurred', 'error');
   }
 }
 

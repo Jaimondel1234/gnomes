@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import {
   ContainerStyle,
   InputStyle,
   TextStyle,
   SpanStyle,
-} from "../../styles/core";
-import { useForm } from "../../hooks/useForm";
-import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { startGnomeSearch } from "../../actions/gnome";
+} from '../../styles/core';
+import { useForm } from '../../hooks/useForm';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { startGnomeSearch } from '../../actions/gnome';
 
 /** Style of input of search */
 const SearchInputStyle = styled(InputStyle)`
@@ -19,26 +19,29 @@ const SearchInputStyle = styled(InputStyle)`
   padding: 12px;
 `;
 
+/*
+  Component that displays the in gnomo search input
+*/
 export const SearchInput = () => {
   const dispatch = useDispatch();
   const [formValues, handleInputChange] = useForm({
-    searchText: "",
+    searchText: '',
   });
 
   const { searchText } = formValues;
 
   const handleSearch = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       dispatch(startGnomeSearch(searchText));
     }
   };
 
   return (
     <SearchInputStyle
-      type="text"
-      placeholder="Tobus Quickwhistle"
-      name="searchText"
-      autoComplete="off"
+      type='text'
+      placeholder='Tobus Quickwhistle'
+      name='searchText'
+      autoComplete='off'
       value={searchText}
       onChange={handleInputChange}
       onKeyPress={handleSearch}

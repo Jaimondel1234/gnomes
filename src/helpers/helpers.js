@@ -1,10 +1,14 @@
 import {
   getGnomeByNameSelector,
   getGnomesByNumberSelector,
-} from "../selectors/selectors";
-import { API } from "../api/API";
-import map from "lodash/map";
-import PropTypes from "prop-types";
+} from '../selectors/selectors';
+import { API } from '../api/API';
+import map from 'lodash/map';
+import PropTypes from 'prop-types';
+
+/* 
+   Helpers
+ */
 
 export async function getGnomeByName(name) {
   const listGnomes = await API.getGnomes();
@@ -35,7 +39,7 @@ getListWithGenres.propTypes = {
 };
 
 export function getGenreByHairColor(hair_color) {
-  return hair_color.toLowerCase() === "red" ? "male" : "female";
+  return hair_color.toLowerCase() === 'red' ? 'male' : 'female';
 }
 
 getGenreByHairColor.propTypes = {

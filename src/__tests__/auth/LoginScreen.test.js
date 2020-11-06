@@ -1,14 +1,14 @@
-import React from "react";
-import { mount } from "enzyme";
-import configureStore from "redux-mock-store";
-import { Provider } from "react-redux";
-import { ThemeProvider } from "styled-components";
+import React from 'react';
+import { mount } from 'enzyme';
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 
-import { LoginScreen } from "../../auth/LoginScreen";
-import { types } from "../../types/types";
-import { theme } from "../../themes/theme";
+import { LoginScreen } from '../../auth/LoginScreen';
+import { types } from '../../types/types';
+import { theme } from '../../themes/theme';
 
-describe("Test <LoginScreen/>", () => {
+describe('Test <LoginScreen/>', () => {
   const middlewares = [];
   const mockStore = configureStore(middlewares);
   const initState = {};
@@ -20,17 +20,17 @@ describe("Test <LoginScreen/>", () => {
       <ThemeProvider theme={theme}>
         <LoginScreen />
       </ThemeProvider>
-    </Provider>
+    </Provider>,
   );
-  test("it must be displayed correctly", () => {
+  test('it must be displayed correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  test("submitting the form, triggers the action to log", () => {
-    wrapper.find("form").prop("onSubmit")({ preventDefault: () => {} });
+  test('submitting the form, triggers the action to log', () => {
+    wrapper.find('form').prop('onSubmit')({ preventDefault: () => {} });
     expect(store.dispatch).toHaveBeenCalledWith({
       type: types.loginRequest,
-      email: "heroe@gmail.com",
-      password: "heroe",
+      email: 'heroe@gmail.com',
+      password: 'heroe',
     });
   });
 });

@@ -1,5 +1,9 @@
+/* 
+  Theme
+*/
+
 export const theme = {
   color: {
-    main: "#007bff",
+    main: '#007bff',
   },
 };

@@ -1,10 +1,14 @@
-import { types } from "../types/types";
+import { types } from '../types/types';
 
 const initialState = {
   scrollNumberGnomes: 0,
   loading: false,
   gnomeSearched: {},
 };
+
+/* 
+  Gnome Reducer
+*/
 export const gnomeReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.addGnomes:

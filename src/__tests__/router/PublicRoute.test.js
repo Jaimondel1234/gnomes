@@ -1,12 +1,12 @@
-import { mount } from "enzyme";
-import React from "react";
-import { MemoryRouter } from "react-router-dom";
-import { PublicRoute } from "../../router/PublicRoute";
+import { mount } from 'enzyme';
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
+import { PublicRoute } from '../../router/PublicRoute';
 
-describe("Test <PublicRoute/>", () => {
-  const props = { location: { pathname: "/" } };
+describe('Test <PublicRoute/>', () => {
+  const props = { location: { pathname: '/' } };
 
-  test("it must show the item if it is not authenticated", () => {
+  test('it must show the item if it is not authenticated', () => {
     const wrapper = mount(
       <MemoryRouter>
         <PublicRoute
@@ -14,12 +14,12 @@ describe("Test <PublicRoute/>", () => {
           component={() => <span>Span Text</span>}
           {...props}
         />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
-    expect(wrapper.find("span").exists()).toBe(false);
+    expect(wrapper.find('span').exists()).toBe(false);
   });
 
-  test("it must display the item if it is not authenticated", () => {
+  test('it must display the item if it is not authenticated', () => {
     const wrapper = mount(
       <MemoryRouter>
         <PublicRoute
@@ -27,8 +27,8 @@ describe("Test <PublicRoute/>", () => {
           component={() => <span>Span Text</span>}
           {...props}
         />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
-    expect(wrapper.find("span").exists()).toBe(true);
+    expect(wrapper.find('span').exists()).toBe(true);
   });
 });

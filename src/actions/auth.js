@@ -1,5 +1,8 @@
-import { types } from "../types/types";
+import { types } from '../types/types';
 
+/*
+  Auth actions
+*/
 export const login = (uid, displayName) => ({
   type: types.login,
   displayName,

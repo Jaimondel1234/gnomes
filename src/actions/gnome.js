@@ -1,5 +1,8 @@
-import { types } from "../types/types";
+import { types } from '../types/types';
 
+/*
+  Gnome actions
+*/
 export const addGnomes = (gnomes) => ({
   type: types.addGnomes,
   gnomes,

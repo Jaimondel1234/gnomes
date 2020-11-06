@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
-import { PublicRoute } from "./PublicRoute";
-import { PrivateRoute } from "./PrivateRoute";
-import { LoginScreen } from "../auth/LoginScreen";
-import { DashboardRoutes } from "./DashboardRoute";
-import { useSelector, useDispatch } from "react-redux";
-import { login } from "../actions/auth";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { PublicRoute } from './PublicRoute';
+import { PrivateRoute } from './PrivateRoute';
+import { LoginScreen } from '../auth/LoginScreen';
+import { DashboardRoutes } from './DashboardRoute';
+import { useSelector, useDispatch } from 'react-redux';
+import { login } from '../actions/auth';
+
+/* AppRouter (root)
+ */
 
 export function AppRouter() {
   const dispatch = useDispatch();
@@ -13,7 +16,7 @@ export function AppRouter() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       dispatch(login(user.uid, user.displayName));
     }
@@ -28,16 +31,16 @@ export function AppRouter() {
       <Switch>
         <PublicRoute
           exact
-          path="/login"
+          path='/login'
           component={LoginScreen}
           isAuthenticated={isAuthenticated}
         />
         <PrivateRoute
-          path="/"
+          path='/'
           component={DashboardRoutes}
           isAuthenticated={isAuthenticated}
         />
-        <Redirect to="/" />
+        <Redirect to='/' />
       </Switch>
     </Router>
   );

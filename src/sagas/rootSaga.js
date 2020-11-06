@@ -1,8 +1,12 @@
-import { call, all, race, spawn } from "redux-saga/effects";
-import { watchAuth } from "./authSaga";
-import { watchGnome } from "./gnomeSaga";
-import { watchSearchGnome } from "./searchGnomeSaga";
-import map from "lodash/map";
+import { call, all, spawn } from 'redux-saga/effects';
+import { watchAuth } from './authSaga';
+import { watchGnome } from './gnomeSaga';
+import { watchSearchGnome } from './searchGnomeSaga';
+import map from 'lodash/map';
+
+/* 
+ Root Saga
+*/
 
 export function* rootSaga() {
   const sagas = [watchAuth, watchGnome, watchSearchGnome];
@@ -18,7 +22,7 @@ export function* rootSaga() {
             console.log(e);
           }
         }
-      })
-    )
+      }),
+    ),
   );
 }

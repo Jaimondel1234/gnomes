@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
+/* 
+   useForm Hooks
+ */
 export const useForm = (initialState = {}) => {
   const [values, setValues] = useState(initialState);
   const reset = (newFormState = initialState) => {

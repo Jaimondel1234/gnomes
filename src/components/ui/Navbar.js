@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { logout } from "../../actions/auth";
-import { NavbarList, NavbarElement, ButtonStyle } from "../../styles/core";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../actions/auth';
+import { NavbarList, NavbarElement, ButtonStyle } from '../../styles/core';
+import styled from 'styled-components';
 
 const ButtonLogoutStyle = styled(ButtonStyle)`
   display: block;
@@ -14,11 +14,15 @@ const ButtonLogoutStyle = styled(ButtonStyle)`
   line-height: 60px;
 `;
 
+/* 
+   Navbar
+ */
+
 export const Navbar = () => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
     dispatch(logout());
   };
 
@@ -26,16 +30,16 @@ export const Navbar = () => {
     <>
       <NavbarList>
         <NavbarElement>
-          <Link to="/home">Home</Link>
+          <Link to='/home'>Home</Link>
         </NavbarElement>
         <NavbarElement>
-          <Link to="/search">Search</Link>
+          <Link to='/search'>Search</Link>
         </NavbarElement>
         <NavbarElement>
-          <Link to="/all-gnomes">Gnomes</Link>
+          <Link to='/all-gnomes'>Gnomes</Link>
         </NavbarElement>
-        <NavbarElement float="right">
-          <ButtonLogoutStyle onClick={handleLogout} m="5px" p="5px 10px">
+        <NavbarElement float='right'>
+          <ButtonLogoutStyle onClick={handleLogout} m='5px' p='5px 10px'>
             Logout
           </ButtonLogoutStyle>
         </NavbarElement>
